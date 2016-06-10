@@ -10,9 +10,9 @@ Can be used when developing stuff on non-webapp-dedicated LAMP server whlist usi
 * When building for deploy: files for js, css, images, fonts etc. are spewed out in filesystem (i.e., http://devserver.tld/path/to/app/assets/site.js)
 * When building for development: webpack-dev-server hot reloading is used - js is served by node.js on some port, css is inlined within js, images are somewhere in between (i.e., http://devserver.tld:1234/site.js)
 
-This means that paths changes (HTML asking for js, CSS asking for images etc.). A really simple proxying (or in this case just url rewriting) does the job.
+This means that paths change (HTML asking for js, CSS asking for images etc.). A really simple proxying (or in this case just url rewriting) does the job.
 
-This hack comments or uncomments tagged blocks in .htaccess based on what environment (target) combinations webpack is run for.
+This hack comments or uncomments tagged blocks in `.htaccess` based on what environment (target) combinations webpack is run for.
 
 ### Usage
 
@@ -47,7 +47,7 @@ webpackMyHtaccess(
       enabled: staging,
     },
     {
-      tag: 'WARPDEV',
+      tag: 'MYAWESOMETAG',
       enabled: !production,
       attributes: {
         port: 1234
@@ -106,7 +106,7 @@ Sample .htaccess config
 
 ```
 
-Example HTML/PHP file assumed to be at abc. In this configuration `public/site.js` will be found both on static deploy as well as hotreloading webpack-dev-server based on wether content of `MYAWESOMETAG` is disabled/enabled in `.htaccess`.
+Example HTML/PHP file assumed to be at `abc`. In this configuration `public/site.js` will be found both on static deploy as well as hotreloading webpack-dev-server based on wether content of `MYAWESOMETAG` is disabled/enabled in `.htaccess`.
 
 ```
 <!DOCTYPE HTML>
