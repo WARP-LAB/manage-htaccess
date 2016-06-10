@@ -1,0 +1,28 @@
+{
+  "name": "manage-htaccess",
+  "version": "1.0.0",
+  "description": "Enable or disable statement blocks / features within .htaccess based on some state.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WARP-LAB/manage-htaccess.git"
+  },
+  "keywords": [
+    "build",
+    "apache",
+    "htaccess",
+    "webpack",
+    "webpack-dev-server"
+  ],
+  "author": "kroko / Reinis Adovičs <development@warp.lv> (http://www.warp.lv)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WARP-LAB/manage-htaccess/issues"
+  },
+  "homepage": "https://github.com/WARP-LAB/manage-htaccess#readme",
+  "peerDependencies": {
+  }
+}
